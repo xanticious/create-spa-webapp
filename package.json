@@ -7,7 +7,10 @@
   ],
   "scripts": {
     "build": "npm run build --workspace=packages/cli",
-    "test": "npm run test --workspace=packages/cli"
+    "test": "npm run test --workspace=packages/cli",
+    "lint": "npm run lint --workspace=packages/cli",
+    "fmt": "npm run fmt --workspace=packages/cli",
+    "format": "npm run fmt"
   },
   "engines": {
     "node": ">=18.0.0"
