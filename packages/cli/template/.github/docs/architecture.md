@@ -48,5 +48,13 @@ TypeScript → tsc (type-check only, noEmit: true)
 
 ## Deployment
 
-The `dist/` folder is a fully static site. It can be served from any static host. The project
-includes a GitHub Actions workflow that deploys to GitHub Pages on every push to `main`.
+The `dist/` folder is a fully static site. The project includes a GitHub Actions workflow
+that deploys to **GitHub Pages** on every push to `main`.
+
+Because GitHub Pages serves the app under a repository subpath (e.g.
+`https://user.github.io/repo-name/`), asset references must use **relative paths**:
+
+- Set the `base` option in `vite.config.ts` to match the repository name (or use `'./'` for a
+  portable relative base) — do **not** leave it as the default `/`
+- Import static assets through ES module imports so Vite rewrites paths automatically
+- Avoid hardcoded root-relative URLs (`/images/foo.png`) anywhere in source or CSS

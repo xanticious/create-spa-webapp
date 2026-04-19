@@ -32,6 +32,14 @@
 - Vitest is the test runner
 - File naming: `<feature>.test.ts` or `<feature>.test.tsx`
 
+## Assets
+
+- This project is deployed to **GitHub Pages**, which serves the app under a subpath (e.g. `https://user.github.io/repo/`)
+- Always use **relative paths** when referencing images, fonts, scripts, or other static assets — never hardcoded absolute paths starting with `/`
+- In Vite, import assets via ES module imports (`import logo from './assets/logo.png'`) so Vite resolves them correctly for any base path
+- For assets referenced in CSS, use relative URLs (e.g. `url('./fonts/myfont.woff2')`) rather than root-relative ones
+- The `base` option in `vite.config.ts` controls the public base path; do not assume it is always `/`
+
 ## Git
 
 - Commit messages use imperative mood: "Add feature" not "Added feature"
