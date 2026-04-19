@@ -13,7 +13,8 @@
     "linter": "npm run lint",
     "fmt": "oxfmt src/",
     "format": "npm run fmt",
-    "validate": "npm run fmt && npm run lint && npm run test"
+    "validate": "npm run fmt && npm run lint && npm run test",
+    "remove-template-examples": "node scripts/remove-template-examples.mjs"
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.7.2",

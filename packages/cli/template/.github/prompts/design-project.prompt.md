@@ -1,14 +1,14 @@
 ---
-name: 'Design Project'
-description: 'Interactively gather requirements and generate a comprehensive DESIGN_DOCUMENT.md for a new Single Page Webapp.'
-argument-hint: 'Describe the app you want to build'
-agent: 'agent'
-tools: ['vscode/askQuestions', 'search/codebase', 'createFiles', 'editFiles']
+name: "Design Project"
+description: "Interactively gather requirements and generate a comprehensive DESIGN_DOCUMENT.md for a new Single Page Webapp."
+argument-hint: "Describe the app you want to build"
+agent: "agent"
+tools: ["vscode/askQuestions", "search/codebase", "createFiles", "editFiles"]
 ---
 
 As an expert Project Manager and Software Architect, I want you to ask me questions 2-3 at a time to create a comprehensive `./design/DESIGN_DOCUMENT.md` file for a new Single Page Webapp (npm, TypeScript, etc.).
 
-This repo includes a basic hello world application with all of the libraries already installed. **Phase 0** of your plan will involve removing the boiler-plate code before any feature work begins.
+This repo includes a basic hello world application with all of the libraries already installed. You'll most likely start Phase 1 by running `npm run remove-template-examples` to remove the hello world files.
 
 The app I want to create is: ${input:appDescription:Describe the app you want to build}.
 
@@ -32,5 +32,5 @@ Once all necessary information has been gathered, produce a `./design/DESIGN_DOC
 5. **API & Integrations** — external services, endpoints, and data contracts
 6. **Authentication & Authorization** — strategy and role definitions
 7. **UI/UX Guidelines** — design system usage, accessibility standards, responsive strategy
-8. **Phase Plan** — ordered implementation phases starting with Phase 0 (boilerplate removal)
+8. **Phase Plan** — ordered implementation phases starting with Phase 1
 9. **Open Questions** — unresolved decisions or assumptions to revisit
