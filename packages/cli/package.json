@@ -1,0 +1,49 @@
+{
+  "name": "create-spa-webapp",
+  "version": "0.1.0",
+  "description": "Scaffold a modern SPA with TypeScript, React, Vite, Vitest, XState, PixiJS and more",
+  "type": "module",
+  "bin": {
+    "create-spa-webapp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "template"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --target node18 --clean",
+    "dev": "tsx src/index.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.9.1",
+    "execa": "^9.5.2",
+    "fs-extra": "^11.3.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.14.0",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  },
+  "keywords": [
+    "create",
+    "spa",
+    "react",
+    "vite",
+    "typescript",
+    "xstate",
+    "pixijs",
+    "scaffold",
+    "template"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xanticious/create-spa-webapp.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

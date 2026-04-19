@@ -1,0 +1,119 @@
+/* App layout */
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.app > h1 {
+  font-size: 2rem;
+  border-bottom: 1px solid #2a2a3a;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.app section {
+  margin-bottom: 3rem;
+}
+
+.app section > h2 {
+  color: #a0a0c0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.app section > ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.app section > ul > li {
+  background: #1e1e2e;
+  border: 1px solid #2a2a3a;
+  border-radius: 6px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* Font examples */
+.font-examples h3,
+.pixi-example h3,
+.counter-example h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #c8c8e0;
+}
+
+.font-examples p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.font-libre-baskerville {
+  font-family: 'Libre Baskerville', serif;
+}
+.font-lora {
+  font-family: 'Lora', serif;
+}
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+.font-open-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+.font-lato {
+  font-family: 'Lato', sans-serif;
+}
+.font-jetbrains-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+.font-fira-code {
+  font-family: 'Fira Code', monospace;
+}
+
+/* PixiJS example */
+.pixi-example canvas {
+  border-radius: 8px;
+  display: block;
+}
+
+/* XState counter */
+.counter-example {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.counter-example span {
+  font-size: 1.25rem;
+  min-width: 3rem;
+  text-align: center;
+}
+
+.counter-example button {
+  background: #1e1e2e;
+  color: #e8e8f0;
+  border: 1px solid #2a2a3a;
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem;
+  font-size: 1rem;
+  transition: background 0.15s;
+}
+
+.counter-example button:hover {
+  background: #2a2a3e;
+}
+
+/* Header icon */
+.header-icon {
+  margin-right: 0.5rem;
+  color: #7c7cdc;
+}
