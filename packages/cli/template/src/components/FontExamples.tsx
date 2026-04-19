@@ -1,20 +1,22 @@
-const FONTS: { name: string; className: string }[] = [
-  { name: "Libre Baskerville", className: "font-libre-baskerville" },
-  { name: "Lora", className: "font-lora" },
-  { name: "Inter", className: "font-inter" },
-  { name: "Roboto", className: "font-roboto" },
-  { name: "Open Sans", className: "font-open-sans" },
-  { name: "Lato", className: "font-lato" },
-  { name: "JetBrains Mono", className: "font-jetbrains-mono" },
-  { name: "Fira Code", className: "font-fira-code" },
+import styles from "./FontExamples.module.css";
+
+const FONTS: { name: string; fontClass: string }[] = [
+  { name: "Libre Baskerville", fontClass: styles.fontLibreBaskerville },
+  { name: "Lora", fontClass: styles.fontLora },
+  { name: "Inter", fontClass: styles.fontInter },
+  { name: "Roboto", fontClass: styles.fontRoboto },
+  { name: "Open Sans", fontClass: styles.fontOpenSans },
+  { name: "Lato", fontClass: styles.fontLato },
+  { name: "JetBrains Mono", fontClass: styles.fontJetbrainsMono },
+  { name: "Fira Code", fontClass: styles.fontFiraCode },
 ];
 
 export default function FontExamples() {
   return (
-    <div style={{ marginBottom: "2rem" }}>
+    <div className={styles.wrapper}>
       <h3>Font Examples</h3>
-      {FONTS.map(({ name, className }) => (
-        <p key={name} className={className}>
+      {FONTS.map(({ name, fontClass }) => (
+        <p key={name} className={fontClass}>
           Hello World! from {name}
         </p>
       ))}

@@ -8,6 +8,7 @@ A modern Single Page Application built with:
 - **Vitest** — unit testing
 - **XState v5** — state machines
 - **PixiJS v8** — 2D WebGL rendering
+- **CSS Modules** — scoped component styles
 - **OxLint** — fast Rust-based linter
 - **Oxfmt** — code formatter
 - **FontAwesome** — icons

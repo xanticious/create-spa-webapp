@@ -17,7 +17,7 @@
 ## CSS
 
 - Global styles in `src/global.css` (resets, fonts, variables)
-- Component-scoped or layout styles in `src/main.css`
+- Component styles use **CSS Modules** — name files `ComponentName.module.css` and import as `import styles from "./ComponentName.module.css"`
 - Use CSS custom properties (`--var-name`) for design tokens
 
 ## XState
