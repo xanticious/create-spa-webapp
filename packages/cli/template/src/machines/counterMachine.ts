@@ -1,7 +1,7 @@
-import { assign, createMachine } from 'xstate';
+import { assign, createMachine } from "xstate";
 
 export const counterMachine = createMachine({
-  id: 'counter',
+  id: "counter",
   context: { count: 0 },
   on: {
     INCREMENT: {

@@ -1,29 +1,29 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRocket } from '@fortawesome/free-solid-svg-icons';
-import FontExamples from './components/FontExamples';
-import PixiExample from './components/PixiExample';
-import Counter from './components/Counter';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRocket } from "@fortawesome/free-solid-svg-icons";
+import FontExamples from "./components/FontExamples";
+import PixiExample from "./components/PixiExample";
+import Counter from "./components/Counter";
 
 const STACK = [
-  'TypeScript',
-  'React 19',
-  'Vite',
-  'Vitest',
-  'XState v5',
-  'PixiJS v8',
-  'OxLint',
-  'Oxfmt',
-  'FontAwesome',
-  'Google Fonts',
+  "TypeScript",
+  "React 19",
+  "Vite",
+  "Vitest",
+  "XState v5",
+  "PixiJS v8",
+  "OxLint",
+  "Oxfmt",
+  "FontAwesome",
+  "Google Fonts",
 ];
 
 const FEATURES = [
-  'State machine (XState)',
-  'WebGL rendering (PixiJS)',
-  'Google Fonts pre-loaded',
-  'FontAwesome icons',
-  'Type-safe with TypeScript',
-  'GitHub Pages ready',
+  "State machine (XState)",
+  "WebGL rendering (PixiJS)",
+  "Google Fonts pre-loaded",
+  "FontAwesome icons",
+  "Type-safe with TypeScript",
+  "GitHub Pages ready",
 ];
 
 export default function App() {

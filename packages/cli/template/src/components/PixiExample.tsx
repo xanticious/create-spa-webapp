@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react';
-import { Application, Graphics } from 'pixi.js';
+import { useEffect, useRef } from "react";
+import { Application, Graphics } from "pixi.js";
 
 export default function PixiExample() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -10,7 +10,7 @@ export default function PixiExample() {
 
     (async () => {
       await app.init({
-        background: '#1a1a2e',
+        background: "#1a1a2e",
         width: 420,
         height: 220,
         antialias: true,
@@ -45,7 +45,7 @@ export default function PixiExample() {
   }, []);
 
   return (
-    <div style={{ marginBottom: '2rem' }}>
+    <div style={{ marginBottom: "2rem" }}>
       <h3>PixiJS Example</h3>
       <div ref={containerRef} className="pixi-example" />
     </div>
