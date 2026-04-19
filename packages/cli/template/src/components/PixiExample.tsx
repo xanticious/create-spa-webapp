@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Application, Graphics } from "pixi.js";
+import styles from "./PixiExample.module.css";
 
 export default function PixiExample() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -45,9 +46,9 @@ export default function PixiExample() {
   }, []);
 
   return (
-    <div style={{ marginBottom: "2rem" }}>
+    <div className={styles.wrapper}>
       <h3>PixiJS Example</h3>
-      <div ref={containerRef} className="pixi-example" />
+      <div ref={containerRef} className={styles.pixiExample} />
     </div>
   );
 }

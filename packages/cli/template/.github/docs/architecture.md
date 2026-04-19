@@ -9,14 +9,15 @@ backend — all logic runs in the browser.
 
 ```
 src/
-├── global.css          ← CSS reset + Google Fonts import
-├── main.css            ← App layout + component styles
-├── main.tsx            ← React root mount
-├── App.tsx             ← Top-level shell component
-├── components/         ← Reusable UI components
+├── global.css              ← CSS reset + Google Fonts import
+├── App.module.css          ← App layout styles (CSS Module)
+├── main.tsx                ← React root mount
+├── App.tsx                 ← Top-level shell component
+├── components/             ← Reusable UI components
 │   ├── MyComponent.tsx
+│   ├── MyComponent.module.css
 │   └── PixiScene.tsx
-└── machines/           ← XState machine definitions
+└── machines/               ← XState machine definitions
     └── appMachine.ts
 ```
 

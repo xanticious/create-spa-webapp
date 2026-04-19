@@ -1,13 +1,14 @@
 import { useMachine } from "@xstate/react";
 import { counterMachine } from "../machines/counterMachine";
+import styles from "./Counter.module.css";
 
 export default function Counter() {
   const [state, send] = useMachine(counterMachine);
 
   return (
-    <div style={{ marginBottom: "2rem" }}>
+    <div className={styles.wrapper}>
       <h3>XState Counter</h3>
-      <div className="counter-example">
+      <div className={styles.counterExample}>
         <button onClick={() => send({ type: "DECREMENT" })}>−</button>
         <span>{state.context.count}</span>
         <button onClick={() => send({ type: "INCREMENT" })}>+</button>

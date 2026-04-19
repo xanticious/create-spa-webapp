@@ -3,6 +3,7 @@ import { faRocket } from "@fortawesome/free-solid-svg-icons";
 import FontExamples from "./components/FontExamples";
 import PixiExample from "./components/PixiExample";
 import Counter from "./components/Counter";
+import styles from "./App.module.css";
 
 const STACK = [
   "TypeScript",
@@ -11,6 +12,7 @@ const STACK = [
   "Vitest",
   "XState v5",
   "PixiJS v8",
+  "CSS Modules",
   "OxLint",
   "Oxfmt",
   "FontAwesome",
@@ -28,9 +30,9 @@ const FEATURES = [
 
 export default function App() {
   return (
-    <main className="app">
+    <main className={styles.app}>
       <h1>
-        <FontAwesomeIcon icon={faRocket} className="header-icon" />
+        <FontAwesomeIcon icon={faRocket} className={styles.headerIcon} />
         SPA (Single Page Application) Template
       </h1>
 
