@@ -99,6 +99,7 @@ async function main(): Promise<void> {
     placeholder: String(defaultPort),
     defaultValue: String(defaultPort),
     validate: (val) => {
+      if (!val) return;
       const port = parseInt(val, 10);
       if (isNaN(port) || port < 1 || port > 65535) {
         return "Port must be a number between 1 and 65535.";
@@ -156,11 +157,20 @@ async function main(): Promise<void> {
 
   spinner.start("Installing dependencies…");
   try {
-    await execa("npm", ["install"], { cwd: targetDir, stdio: "inherit" });
+    await execa("npm", ["install"], { cwd: targetDir, stdio: "pipe" });
     spinner.stop("Dependencies installed.");
   } catch {
     spinner.stop("npm install failed — please run it manually.");
     p.log.warn(`  cd ${folder} && npm install`);
+  }
+
+  spinner.start("Initialising git repository…");
+  try {
+    await execa("git", ["init"], { cwd: targetDir, stdio: "pipe" });
+    spinner.stop("Git repository initialised.");
+  } catch {
+    spinner.stop("git init failed — please run it manually.");
+    p.log.warn(`  cd ${folder} && git init`);
   }
 
   try {

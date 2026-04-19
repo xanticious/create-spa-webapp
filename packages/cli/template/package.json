@@ -12,24 +12,26 @@
     "lint": "oxlint --tsconfig tsconfig.json src/",
     "linter": "npm run lint",
     "fmt": "oxfmt src/",
-    "format": "npm run fmt"
+    "format": "npm run fmt",
+    "validate": "npm run fmt && npm run lint && npm run test"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
-    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@fortawesome/react-fontawesome": "^3.1.1",
     "@xstate/react": "^5.0.2",
     "pixi.js": "^8.8.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "xstate": "^5.19.2"
   },
+  "license": "UNLICENSED",
   "devDependencies": {
     "oxfmt": "^0.45.0",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",
-    "oxlint": "^0.16.6",
+    "jsdom": "^26.0.0",
+    "oxlint": "^1.60.0",
     "typescript": "^5.8.3",
     "vite": "^6.4.2",
     "vitest": "^3.1.2"

@@ -40,6 +40,7 @@ What port number? (defaults to a random port)
 ```
 
 After answering the prompts the CLI will:
+
 1. Copy the embedded project template into the specified folder
 2. Replace all `__PROJECT_NAME__` and `__PORT__` placeholders with the user's answers
 3. Run `npm install` inside the new project
@@ -78,7 +79,6 @@ create-spa-webapp/              ← repo root
 │   └── favicon.svg
 ├── src/
 │   ├── global.css              ← Google Fonts + CSS reset
-│   ├── main.css                ← app-level styles
 │   ├── main.tsx                ← React entry point
 │   ├── App.tsx                 ← root component
 │   ├── components/
@@ -111,34 +111,34 @@ create-spa-webapp/              ← repo root
 
 ## Technology Stack (Generated Project)
 
-| Technology | Role |
-|---|---|
-| TypeScript | Static typing |
-| React 19 | UI framework |
-| Vite | Dev server & bundler |
-| Vitest | Unit/integration testing |
-| XState v5 | State machines |
-| PixiJS v8 | 2D WebGL rendering |
-| OxLint | Fast Rust-based linter |
-| Oxfmt | Code formatter |
-| FontAwesome | Icon library |
-| Google Fonts | Typography |
+| Technology   | Role                     |
+| ------------ | ------------------------ |
+| TypeScript   | Static typing            |
+| React 19     | UI framework             |
+| Vite         | Dev server & bundler     |
+| Vitest       | Unit/integration testing |
+| XState v5    | State machines           |
+| PixiJS v8    | 2D WebGL rendering       |
+| OxLint       | Fast Rust-based linter   |
+| Oxfmt        | Code formatter           |
+| FontAwesome  | Icon library             |
+| Google Fonts | Typography               |
 
 ---
 
 ## Generated Project NPM Scripts
 
-| Command | Description |
-|---|---|
-| `npm run dev` | Start Vite dev server |
-| `npm run build` | TypeScript compile + Vite production build |
-| `npm run preview` | Preview production build locally |
-| `npm run test` | Run Vitest once |
-| `npm run test:watch` | Run Vitest in watch mode |
-| `npm run lint` | OxLint with `--tsconfig` for type-aware rules |
-| `npm run linter` | Alias for `lint` |
-| `npm run fmt` | Oxfmt format (write) |
-| `npm run format` | Alias for `fmt` |
+| Command              | Description                                   |
+| -------------------- | --------------------------------------------- |
+| `npm run dev`        | Start Vite dev server                         |
+| `npm run build`      | TypeScript compile + Vite production build    |
+| `npm run preview`    | Preview production build locally              |
+| `npm run test`       | Run Vitest once                               |
+| `npm run test:watch` | Run Vitest in watch mode                      |
+| `npm run lint`       | OxLint with `--tsconfig` for type-aware rules |
+| `npm run linter`     | Alias for `lint`                              |
+| `npm run fmt`        | Oxfmt format (write)                          |
+| `npm run format`     | Alias for `fmt`                               |
 
 ---
 
@@ -194,47 +194,54 @@ A GitHub Actions workflow at `.github/workflows/deploy.yml` automates deployment
 
 ## CLI Technology Stack
 
-| Technology | Role |
-|---|---|
-| TypeScript | Type-safe CLI source |
-| tsup | ESM bundle for distribution |
+| Technology     | Role                          |
+| -------------- | ----------------------------- |
+| TypeScript     | Type-safe CLI source          |
+| tsup           | ESM bundle for distribution   |
 | @clack/prompts | Beautiful interactive prompts |
-| execa | Spawn npm install / `code .` |
-| fs-extra | Recursive template copy |
+| execa          | Spawn npm install / `code .`  |
+| fs-extra       | Recursive template copy       |
 
 ---
 
 ## Design Decisions
 
 ### Monorepo
+
 The repository is a minimal npm workspaces monorepo with a single `cli` package. This keeps the
 CLI source and template co-located without introducing heavy tooling (no Turborepo/Nx required at
 this scale).
 
 ### Template Bundled with CLI
+
 The template directory lives inside the `cli` package and is published to npm alongside the
 compiled CLI binary (`dist/index.js`). This means no network fetches are needed at project
 creation time — the template is always available locally.
 
 ### Relative Paths for GitHub Pages
+
 `vite.config.ts` sets `base: './'`. This makes all JS/CSS/asset imports in the production build
 use relative paths, so the built `dist/` folder can be served from any GitHub Pages URL path
 (e.g. `https://<user>.github.io/<repo>/`).
 
 ### oxlint over ESLint
+
 OxLint is dramatically faster than ESLint for large codebases and has zero configuration
 overhead. The `--tsconfig tsconfig.json` flag enables type-aware rules equivalent to
 `@typescript-eslint/recommended-type-checked`.
 
 ### Oxfmt for Formatting
+
 Oxfmt is a Rust-based formatter from the OXC project. It is a drop-in replacement for Prettier,
 requires no configuration for sensible defaults, and is significantly faster.
 
 ### XState v5
+
 XState v5 introduced a vastly simplified API (no more `Machine()` + `interpret()` boilerplate).
 The counter machine demonstrates the new `createMachine` + `assign` pattern with `@xstate/react`'s
 `useMachine` hook.
 
 ### PixiJS v8
+
 PixiJS v8 moved to a fully async `Application.init()` pattern. The `PixiExample` component
 demonstrates the correct async/cleanup pattern inside a React `useEffect`.

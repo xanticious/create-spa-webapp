@@ -6,12 +6,12 @@ export const counterMachine = createMachine({
   on: {
     INCREMENT: {
       actions: assign({
-        count: ({ context }: { context: { count: number } }) => context.count + 1,
+        count: ({ context }) => context.count + 1,
       }),
     },
     DECREMENT: {
       actions: assign({
-        count: ({ context }: { context: { count: number } }) => context.count - 1,
+        count: ({ context }) => context.count - 1,
       }),
     },
     RESET: {

@@ -12,4 +12,5 @@
 .pixiExample canvas {
   border-radius: 8px;
   display: block;
+  width: 100%;
 }

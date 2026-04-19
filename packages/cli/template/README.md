@@ -1,4 +1,4 @@
-# __PROJECT_NAME__
+# **PROJECT_NAME**
 
 A modern Single Page Application built with:
 
@@ -23,17 +23,18 @@ npm run dev
 
 ## Available Scripts
 
-| Command | Description |
-|---|---|
-| `npm run dev` | Start Vite dev server |
-| `npm run build` | Production build |
-| `npm run preview` | Preview production build |
-| `npm run test` | Run tests once |
-| `npm run test:watch` | Run tests in watch mode |
-| `npm run lint` | Run OxLint |
-| `npm run linter` | Alias for `lint` |
-| `npm run fmt` | Run Oxfmt formatter |
-| `npm run format` | Alias for `fmt` |
+| Command              | Description                        |
+| -------------------- | ---------------------------------- |
+| `npm run dev`        | Start Vite dev server              |
+| `npm run build`      | Production build                   |
+| `npm run preview`    | Preview production build           |
+| `npm run test`       | Run tests once                     |
+| `npm run test:watch` | Run tests in watch mode            |
+| `npm run lint`       | Run OxLint                         |
+| `npm run linter`     | Alias for `lint`                   |
+| `npm run fmt`        | Run Oxfmt formatter                |
+| `npm run format`     | Alias for `fmt`                    |
+| `npm run validate`   | Format, lint, and test in sequence |
 
 ## Deployment
 
