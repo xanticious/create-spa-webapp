@@ -14,20 +14,19 @@ src/
 ├── main.tsx            ← React root mount
 ├── App.tsx             ← Top-level shell component
 ├── components/         ← Reusable UI components
-│   ├── FontExamples.tsx
-│   ├── PixiExample.tsx
-│   └── Counter.tsx
+│   ├── MyComponent.tsx
+│   └── PixiScene.tsx
 └── machines/           ← XState machine definitions
-    └── counterMachine.ts
+    └── appMachine.ts
 ```
 
 ## Data Flow
 
 ```
 App
- ├── FontExamples   (static render, no state)
- ├── PixiExample    (imperative WebGL via PixiJS, managed in useEffect)
- └── Counter        (reads/writes counterMachine via useMachine hook)
+ ├── MyComponent    (UI component, minimal or no local state)
+ ├── PixiScene      (imperative WebGL via PixiJS, managed in useEffect)
+ └── FeatureView    (reads/writes appMachine via useMachine hook)
 ```
 
 ## State Management
