@@ -9,7 +9,7 @@ A modern Single Page Application built with:
 - **XState v5** — state machines
 - **PixiJS v8** — 2D WebGL rendering
 - **OxLint** — fast Rust-based linter
-- **Biome** — code formatter
+- **Oxfmt** — code formatter
 - **FontAwesome** — icons
 - **Google Fonts** — typography
 
@@ -31,7 +31,7 @@ npm run dev
 | `npm run test:watch` | Run tests in watch mode |
 | `npm run lint` | Run OxLint |
 | `npm run linter` | Alias for `lint` |
-| `npm run fmt` | Run Biome formatter |
+| `npm run fmt` | Run Oxfmt formatter |
 | `npm run format` | Alias for `fmt` |
 
 ## Deployment
