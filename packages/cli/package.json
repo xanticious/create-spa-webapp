@@ -38,7 +38,6 @@
     "scaffold",
     "template"
   ],
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/xanticious/create-spa-webapp.git"
