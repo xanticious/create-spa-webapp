@@ -53,6 +53,21 @@ It then:
 | `npm run lint` / `linter` | Run OxLint |
 | `npm run fmt` / `format` | Run Biome formatter |
 
+## Building from Source
+
+```bash
+# 1. Install dependencies
+npm install
+
+# 2. Build the CLI
+npm run build
+
+# 3. Install the local build globally
+npm install -g ./packages/cli
+```
+
+After step 3, the `create-spa-webapp` command will be available globally.
+
 ## Repository Structure
 
 ```
