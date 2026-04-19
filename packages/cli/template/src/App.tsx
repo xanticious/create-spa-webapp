@@ -12,7 +12,7 @@ const STACK = [
   'XState v5',
   'PixiJS v8',
   'OxLint',
-  'Biome',
+  'Oxfmt',
   'FontAwesome',
   'Google Fonts',
 ];

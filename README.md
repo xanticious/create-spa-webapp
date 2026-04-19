@@ -38,7 +38,7 @@ It then:
 | XState v5 | State machines |
 | PixiJS v8 | 2D WebGL rendering |
 | OxLint | Fast Rust-based linter |
-| Biome | Code formatter |
+| Oxfmt | Code formatter |
 | FontAwesome | Icon library |
 | Google Fonts | Typography |
 
@@ -51,7 +51,7 @@ It then:
 | `npm run test` | Run tests once |
 | `npm run test:watch` | Run tests in watch mode |
 | `npm run lint` / `linter` | Run OxLint |
-| `npm run fmt` / `format` | Run Biome formatter |
+| `npm run fmt` / `format` | Run Oxfmt formatter |
 
 ## Repository Structure
 

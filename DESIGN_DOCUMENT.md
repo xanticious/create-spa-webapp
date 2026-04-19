@@ -120,7 +120,7 @@ create-spa-webapp/              ← repo root
 | XState v5 | State machines |
 | PixiJS v8 | 2D WebGL rendering |
 | OxLint | Fast Rust-based linter |
-| Biome | Code formatter |
+| Oxfmt | Code formatter |
 | FontAwesome | Icon library |
 | Google Fonts | Typography |
 
@@ -137,7 +137,7 @@ create-spa-webapp/              ← repo root
 | `npm run test:watch` | Run Vitest in watch mode |
 | `npm run lint` | OxLint with `--tsconfig` for type-aware rules |
 | `npm run linter` | Alias for `lint` |
-| `npm run fmt` | Biome format (write) |
+| `npm run fmt` | Oxfmt format (write) |
 | `npm run format` | Alias for `fmt` |
 
 ---
@@ -149,7 +149,7 @@ The generated `App.tsx` renders a simple reference page:
 ```
 SPA (Single Page Application) Template
 
-Stack: TypeScript, React, Vite, Vitest, XState, PixiJS, OxLint, Biome, FontAwesome
+Stack: TypeScript, React, Vite, Vitest, XState, PixiJS, OxLint, Oxfmt, FontAwesome
 
 Features:
   • State machine (XState)
@@ -226,9 +226,9 @@ OxLint is dramatically faster than ESLint for large codebases and has zero confi
 overhead. The `--tsconfig tsconfig.json` flag enables type-aware rules equivalent to
 `@typescript-eslint/recommended-type-checked`.
 
-### Biome for Formatting
-Biome is a Rust-based formatter and linter that is a drop-in replacement for Prettier. It
-requires no configuration for sensible defaults and is significantly faster.
+### Oxfmt for Formatting
+Oxfmt is a Rust-based formatter from the OXC project. It is a drop-in replacement for Prettier,
+requires no configuration for sensible defaults, and is significantly faster.
 
 ### XState v5
 XState v5 introduced a vastly simplified API (no more `Machine()` + `interpret()` boilerplate).
