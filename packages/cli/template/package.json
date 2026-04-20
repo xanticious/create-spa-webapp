@@ -9,11 +9,12 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "lint": "oxlint --tsconfig tsconfig.json src/",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint -c .oxlintrc.json --tsconfig tsconfig.json src/",
     "linter": "npm run lint",
     "fmt": "oxfmt src/",
     "format": "npm run fmt",
-    "validate": "npm run fmt && npm run lint && npm run test",
+    "validate": "npm run fmt && npm run typecheck && npm run lint && npm run test",
     "remove-template-examples": "node scripts/remove-template-examples.mjs"
   },
   "dependencies": {
@@ -27,12 +28,14 @@
   },
   "license": "UNLICENSED",
   "devDependencies": {
-    "oxfmt": "^0.45.0",
+    "@types/node": "^25.6.0",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",
     "jsdom": "^26.0.0",
+    "oxfmt": "^0.45.0",
     "oxlint": "^1.60.0",
+    "oxlint-tsgolint": "^0.21.1",
     "typescript": "^5.8.3",
     "vite": "^6.4.2",
     "vitest": "^3.1.2"

@@ -29,7 +29,7 @@ export default function PixiExample() {
 
     let onResize: () => void;
 
-    (async () => {
+    void (async () => {
       const container = containerRef.current;
       if (!container) return;
 
