@@ -4,12 +4,23 @@ A CLI tool for scaffolding modern Single Page Applications — similar to `creat
 
 ## Usage
 
-```bash
-# Using npx (no install required)
-npx create-spa-webapp
+Clone and build the project:
 
-# Or install globally
-npm install -g create-spa-webapp
+```bash
+git clone https://github.com/xanticious/create-spa-webapp.git
+cd create-spa-webapp
+
+# Install dependencies and build the CLI
+npm install
+npm run build
+
+# Install the CLI globally
+npm install -g ./packages/cli
+```
+
+Then run from anywhere:
+
+```bash
 create-spa-webapp
 ```
 
@@ -22,6 +33,7 @@ What port number?            → 5173             (defaults to a random port)
 ```
 
 It then:
+
 1. Copies the embedded template into the specified folder
 2. Replaces placeholders (`__PROJECT_NAME__`, `__FOLDER_NAME__`, `__PORT__`)
 3. Runs `npm install`
@@ -29,44 +41,29 @@ It then:
 
 ## Generated Project Stack
 
-| Technology | Role |
-|---|---|
-| TypeScript | Static typing |
-| React 19 | UI framework |
-| Vite | Dev server & bundler |
-| Vitest | Unit testing |
-| XState v5 | State machines |
-| PixiJS v8 | 2D WebGL rendering |
-| OxLint | Fast Rust-based linter |
-| Oxfmt | Code formatter |
-| FontAwesome | Icon library |
-| Google Fonts | Typography |
+| Technology   | Role                   |
+| ------------ | ---------------------- |
+| TypeScript   | Static typing          |
+| React 19     | UI framework           |
+| Vite         | Dev server & bundler   |
+| Vitest       | Unit testing           |
+| XState v5    | State machines         |
+| PixiJS v8    | 2D WebGL rendering     |
+| OxLint       | Fast Rust-based linter |
+| Oxfmt        | Code formatter         |
+| FontAwesome  | Icon library           |
+| Google Fonts | Typography             |
 
 ## Generated Project Scripts
 
-| Command | Description |
-|---|---|
-| `npm run dev` | Start Vite dev server |
-| `npm run build` | Production build |
-| `npm run test` | Run tests once |
-| `npm run test:watch` | Run tests in watch mode |
-| `npm run lint` / `linter` | Run OxLint |
-| `npm run fmt` / `format` | Run Oxfmt formatter |
-
-## Building from Source
-
-```bash
-# 1. Install dependencies
-npm install
-
-# 2. Build the CLI
-npm run build
-
-# 3. Install the local build globally
-npm install -g ./packages/cli
-```
-
-After step 3, the `create-spa-webapp` command will be available globally.
+| Command                   | Description             |
+| ------------------------- | ----------------------- |
+| `npm run dev`             | Start Vite dev server   |
+| `npm run build`           | Production build        |
+| `npm run test`            | Run tests once          |
+| `npm run test:watch`      | Run tests in watch mode |
+| `npm run lint` / `linter` | Run OxLint              |
+| `npm run fmt` / `format`  | Run Oxfmt formatter     |
 
 ## Repository Structure
 
@@ -77,7 +74,7 @@ create-spa-webapp/
 └── packages/
     └── cli/                 ← Published npm package
         ├── src/index.ts     ← CLI entry point
-        └── template/        ← Bundled project template
+        └── template/        ← Bundled project template (copied on scaffold)
 ```
 
 See [DESIGN_DOCUMENT.md](./DESIGN_DOCUMENT.md) for the full design specification.
